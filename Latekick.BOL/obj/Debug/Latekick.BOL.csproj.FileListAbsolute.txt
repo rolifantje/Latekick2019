@@ -1,0 +1,12 @@
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Latekick.BOL.dll
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Latekick.BOL.pdb
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\FileHelpers.dll
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Latekick.DAL.dll
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Latekick.DAL.pdb
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\code\WinApps\USA\Latekick\Latekick.BOL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\code\WinApps\USA\Latekick\Latekick.BOL\obj\Debug\Latekick.BOL.csprojResolveAssemblyReference.cache
+C:\code\WinApps\USA\Latekick\Latekick.BOL\obj\Debug\Latekick.BOL.dll
+C:\code\WinApps\USA\Latekick\Latekick.BOL\obj\Debug\Latekick.BOL.pdb

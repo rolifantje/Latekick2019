@@ -1,0 +1,49 @@
+----------------------------------------
+Timestamp: 24/11/2011 21:45:21
+
+Message: HandlingInstanceID: 509c190a-a3ff-4db8-8b71-447800c964c4
+An exception of type 'System.Exception' occurred and was caught.
+----------------------------------------------------------------
+11/24/2011 21:45:21
+Type : System.Exception, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Exception of type 'System.Exception' was thrown.
+Source : Latekick.Forms
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void button1_Click(System.Object, System.EventArgs)
+Stack Trace :    at Latekick.Forms.Presentation.ConvertForm.button1_Click(Object sender, EventArgs e) in C:\code\WinApps\USA\Latekick\Latekick.Forms\Presentation\ConvertForm.cs:line 38
+
+Additional Info:
+
+MachineName : GOLDIKOVA
+TimeStamp : 24/11/2011 21:45:21
+FullName : Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+AppDomainName : Latekick.vshost.exe
+ThreadIdentity : 
+WindowsIdentity : Goldikova\gm10
+
+
+Category: General
+
+Priority: 0
+
+EventId: 100
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: GOLDIKOVA
+
+App Domain: Latekick.vshost.exe
+
+ProcessId: 5436
+
+Process Name: C:\code\WinApps\USA\Latekick\Latekick\bin\Debug\Latekick.vshost.exe
+
+Thread Name: 
+
+Win32 ThreadId:8240
+
+Extended Properties: 
+----------------------------------------

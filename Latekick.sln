@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latekick", "Latekick\Latekick.csproj", "{7006C970-6044-4509-9E72-5D42B9F5B8B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latekick.DAL", "..\..\..\WebApps\latekick.net\Latekick_DAL\Latekick.DAL.csproj", "{B40506A5-869B-4034-9A5E-B197C9E98D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latekick.Forms", "Latekick.Forms\Latekick.Forms.csproj", "{1E5362E3-812D-463E-A3A8-A102C514634A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latekick.BOL", "Latekick.BOL\Latekick.BOL.csproj", "{A9886097-C3E3-4834-B469-8258ABB58738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latekick.BLL", "Latekick.BLL\Latekick.BLL.csproj", "{582E54B1-C8B5-488D-A655-6B6D45555131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latekick.PDF", "Latekick.PDF\Latekick.PDF.csproj", "{EACEE20D-C605-49F1-B8E0-3709F06EEEDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7006C970-6044-4509-9E72-5D42B9F5B8B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7006C970-6044-4509-9E72-5D42B9F5B8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7006C970-6044-4509-9E72-5D42B9F5B8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7006C970-6044-4509-9E72-5D42B9F5B8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B40506A5-869B-4034-9A5E-B197C9E98D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B40506A5-869B-4034-9A5E-B197C9E98D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B40506A5-869B-4034-9A5E-B197C9E98D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B40506A5-869B-4034-9A5E-B197C9E98D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5362E3-812D-463E-A3A8-A102C514634A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5362E3-812D-463E-A3A8-A102C514634A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5362E3-812D-463E-A3A8-A102C514634A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5362E3-812D-463E-A3A8-A102C514634A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9886097-C3E3-4834-B469-8258ABB58738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9886097-C3E3-4834-B469-8258ABB58738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9886097-C3E3-4834-B469-8258ABB58738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9886097-C3E3-4834-B469-8258ABB58738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582E54B1-C8B5-488D-A655-6B6D45555131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582E54B1-C8B5-488D-A655-6B6D45555131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582E54B1-C8B5-488D-A655-6B6D45555131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582E54B1-C8B5-488D-A655-6B6D45555131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EACEE20D-C605-49F1-B8E0-3709F06EEEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACEE20D-C605-49F1-B8E0-3709F06EEEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACEE20D-C605-49F1-B8E0-3709F06EEEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACEE20D-C605-49F1-B8E0-3709F06EEEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Latekick_Card">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Course" />
+        <xs:element maxOccurs="unbounded" ref="Race" />
+      </xs:sequence>
+      <xs:attribute name="RaceDate" type="xs:date" use="required" />
+      <xs:attribute name="NumberOfRaces" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Race">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RaceInfo" />
+        <xs:element maxOccurs="unbounded" ref="Entry" />
+      </xs:sequence>
+      <xs:attribute name="RaceDate" type="xs:date" use="required" />
+      <xs:attribute name="RaceNumber" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RaceInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Breed" />
+          <xs:element ref="DayEve" />
+          <xs:element ref="RaceType" />
+          <xs:element ref="RaceTypeLong" />
+          <xs:element ref="Purse" />
+          <xs:element ref="RaceDescription" />
+          <xs:element ref="AgeSexRestrictions" />
+          <xs:element ref="DistanceFurlongs" />
+          <xs:element ref="DistanceYards" />
+          <xs:element ref="CourseCode" />
+          <xs:element ref="CourseName"/>
+          <xs:element ref="RaceNumber" />
+          <xs:element ref="Surface" />
+          <xs:element ref="ClassRating" />
+          <xs:element ref="MaxEarly" />
+          <xs:element ref="MaxMiddle" />
+          <xs:element ref="MaxLate" />
+          <xs:element ref="MaxAverage" />
+          <xs:element ref="MaxRecent" />
+          <xs:element ref="MaxPace" />
+          <xs:element ref="BrisPar_SpeedFig" />
+          <xs:element ref="BrisPar_2F" />
+          <xs:element ref="BrisPar_4F" />
+          <xs:element ref="BrisPar_6F" />
+          <xs:element ref="BrisPar_Late" />
+          <xs:element ref="Going" />
+          <xs:element ref="Weather" />
+          <xs:element ref="PostTime" />
+          <xs:element ref="NumberOfHorses" />
+          <xs:element ref="BetTypes" />
+          <xs:element ref="CD_Profile"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="Entry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="HorseName" />
+        <xs:element ref="Weight" />
+        <xs:element ref="ApprenticeAllowance" />
+        <xs:element ref="Age" />
+        <xs:element ref="Gender" />
+        <xs:element ref="Sire" />
+        <xs:element ref="Dam" />
+        <xs:element ref="DamSire" />
+        <xs:element ref="Medication" />
+        <xs:element ref="Equipment" />
+        <xs:element ref="SaddleClothNo" />
+        <xs:element ref="Draw" />
+        <xs:element ref="ClaimPrice" />
+        <xs:element ref="JockeyName" />
+        <xs:element ref="TrainerName" />
+        <xs:element ref="OwnerName" />
+        <xs:element ref="ML" />
+        <xs:element ref="LK_Odds" />
+        <xs:element ref="Stats" />
+        <xs:element ref="BrisStats" />
+        <xs:element ref="Earnings" />
+        <xs:element ref="ProjectedRatings" />
+        <xs:element ref="PPs" />
+        <xs:element ref="Workouts" />
+        <xs:element ref="RunningStyle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="PPs">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="PP" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Workouts">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="Workout"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  
+  <!--<xs:element name="Jockey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FirstName" />
+        <xs:element ref="MiddleName" />
+        <xs:element ref="LastName" />
+        <xs:element ref="Suffix" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Trainer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="FirstName" />
+        <xs:element ref="MiddleName" />
+        <xs:element ref="LastName" />
+        <xs:element ref="Suffix" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>-->
+  
+  <!-- CD_Profile Elements-->
+  <xs:element name="CD_Profile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Runs_All" />
+        <xs:element ref="PaceWins_All" />
+        <xs:element ref="StalkWins_All" />
+        <xs:element ref="CloseWins_All" />
+
+        <xs:element ref="Runs_Recent" />
+        <xs:element ref="PaceWins_Recent" />
+        <xs:element ref="StalkWins_Recent" />
+        <xs:element ref="CloseWins_Recent" />
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+        <!-- BrisStats Elements-->
+  <xs:element name="Stats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="LifeTime_Runs" />
+        <xs:element ref="LifeTime_Win" />
+        <xs:element ref="LifeTime_Place" />
+        <xs:element ref="LifeTime_Show" />
+        
+        <xs:element ref="ThisYear_Runs" />
+        <xs:element ref="ThisYear_Win" />
+        <xs:element ref="ThisYear_Place" />
+        <xs:element ref="ThisYear_Show" />
+        
+        <xs:element ref="LastYear_Runs" />
+        <xs:element ref="LastYear_Win" />
+        <xs:element ref="LastYear_Place" />
+        <xs:element ref="LastYear_Show" />
+        
+        <xs:element ref="Course_Runs" />
+        <xs:element ref="Course_Win" />
+        <xs:element ref="Course_Place" />
+        <xs:element ref="Course_Show" />
+
+        <xs:element ref="Dirt_Runs" />
+        <xs:element ref="Dirt_Win" />
+        <xs:element ref="Dirt_Place" />
+        <xs:element ref="Dirt_Show" />
+
+        <xs:element ref="Turf_Runs" />
+        <xs:element ref="Turf_Win" />
+        <xs:element ref="Turf_Place" />
+        <xs:element ref="Turf_Show" />
+
+        <xs:element ref="AW_Runs" />
+        <xs:element ref="AW_Win" />
+        <xs:element ref="AW_Place" />
+        <xs:element ref="AW_Show" />
+
+        <xs:element ref="Wet_Runs" />
+        <xs:element ref="Wet_Win" />
+        <xs:element ref="Wet_Place" />
+        <xs:element ref="Wet_Show" />
+
+        <xs:element ref="Distance_Runs" />
+        <xs:element ref="Distance_Win" />
+        <xs:element ref="Distance_Place" />
+        <xs:element ref="Distance_Show" />
+
+        <xs:element ref="Jockey_Runs_Meet" />
+        <xs:element ref="Jockey_Win_Meet" />
+        <xs:element ref="Jockey_Place_Meet" />
+        <xs:element ref="Jockey_Show_Meet" />
+
+        <xs:element ref="Jockey_30d_Runs" />
+        <xs:element ref="Jockey_30d_Win" />
+        <xs:element ref="Jockey_30d_Place" />
+        <xs:element ref="Jockey_30d_Show" />
+
+        <xs:element ref="Trainer_Runs_Meet" />
+        <xs:element ref="Trainer_Win_Meet" />
+        <xs:element ref="Trainer_Place_Meet" />
+        <xs:element ref="Trainer_Show_Meet" />
+
+        <xs:element ref="Trainer_30d_Runs" />
+        <xs:element ref="Trainer_30d_Win" />
+        <xs:element ref="Trainer_30d_Place" />
+        <xs:element ref="Trainer_30d_Show" />
+
+        <xs:element ref="Trainer_ThisYear" />
+        <xs:element ref="Trainer_LastYear" />
+        <xs:element ref="Jockey_ThisYear" />
+        <xs:element ref="Jockey_LastYear" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="BrisStats">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref="BrisStat" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+        <!-- Earnings Elements-->
+  <xs:element name="Earnings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="EarningsLifeTime" />
+        <xs:element ref="EarningsThisYear" />
+        <xs:element ref="EarningsLastYear" />
+        <xs:element ref="EarningsCourse" />
+        <xs:element ref="EarningsDirt" />
+        <xs:element ref="EarningsTurf" />
+        <xs:element ref="EarningsAW" />
+        <xs:element ref="EarningsWet" />
+        <xs:element ref="EarningsDistance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- PROJRATINGS Elements-->
+  <xs:element name="ProjectedRatings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Early" />
+        <xs:element ref="Middle" />
+        <xs:element ref="Late" />
+        <xs:element ref="Dash" />
+        <xs:element ref="Golden" />
+        <xs:element ref="Average" />
+        <xs:element ref="Recent" />
+        <xs:element ref="Quirin" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- PP Elements-->
+  <xs:element name="Workout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="WorkDate" />
+        <xs:element ref="WorkTrack" />
+        <xs:element ref="WorkDistance" />
+        <xs:element ref="WorkGoing" />
+        <xs:element ref="WorkDescription" />
+        <xs:element ref="WorkSurface" />
+        <xs:element ref="WorkTime" />
+        <xs:element ref="WorkRank" />
+        <xs:element ref="WorkRating" />
+        <xs:element ref="WorkFromGate" />
+        <xs:element ref="WorkMates" />
+        <xs:element ref="WorkDaysAgo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Running Style Elements-->
+  <xs:element name="RunningStyle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RunStyle_BRIS" />
+        <xs:element ref="PaceRuns" />
+        <xs:element ref="PaceWins" />
+        <xs:element ref="OffPaceRuns" />
+        <xs:element ref="OffPaceWins" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- BrisStat Elements-->
+  <xs:element name="BrisStat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BrisStatCategory" type="xs:string" default=""/>
+        <xs:element name="Runs" type="xs:int" />
+        <xs:element name="WinPct" type="xs:double" />
+        <xs:element name="ITM" type="xs:double" />
+        <xs:element name="ROI" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>  
+  
+  <!-- PP Elements-->
+  <xs:element name="PP">
+    <xs:complexType>
+      <xs:sequence >
+        <xs:element ref="RaceDate" />
+        <xs:element ref="Breed" />
+        <xs:element ref="Country" />
+        <xs:element ref="CourseCode" />
+        <xs:element ref="RaceNumber" />
+        <xs:element ref="DistanceFurlongs" />
+        <xs:element ref="DistanceYards" />
+        <xs:element ref="Surface" />
+        <xs:element ref="Going" />
+        <xs:element ref="Purse" />
+        <xs:element ref="ClaimPrice" />
+        <xs:element ref="Draw" />
+        <xs:element ref="FinalTime" />
+        <xs:element ref="OfficialFinish" />
+        <xs:element ref="OfficialPositionText" />
+        <xs:element ref="Finish123" />
+        <xs:element ref="DistanceBeaten" />
+        <xs:element ref="Odds" />
+        <xs:element ref="Weight" />
+        <xs:element ref="TripComment" />
+        <xs:element ref="WinName" />
+        <xs:element ref="PlaceName" />
+        <xs:element ref="ShowName" />
+        <xs:element ref="JockeyName" />
+        <xs:element ref="TrainerName" />
+        <xs:element ref="AgeSexRestrictions" />
+        <xs:element ref="Medication" />
+        <xs:element ref="Equipment" />
+        <xs:element ref="PP_Brisnet" />
+        <xs:element ref="PP_Trackmaster" />
+        <xs:element ref="PP_Latekick" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- PP Latekick Elements-->
+  <xs:element name="PP_Latekick">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="RaceType" />
+        <xs:element ref="ClassRating_GMR" />
+        <xs:element ref="Finish123_GMR" />
+        <xs:element ref="Early" />
+        <xs:element ref="Middle" />
+        <xs:element ref="Late" />
+        <xs:element ref="Dash" />
+        <xs:element ref="Golden" />
+        <xs:element ref="Latekick" />
+        <xs:element ref="LateSpeed" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- PP Brisnet Elements-->
+  <xs:element name="PP_Brisnet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SpeedFig" type="xs:int" />
+        <xs:element name="PaceFig_2F" type="xs:int" />
+        <xs:element name="PaceFig_4F" type="xs:int" />
+        <xs:element name="PaceFig_6F" type="xs:int" />
+        <xs:element name="PaceFig_8F" type="xs:int" />
+        <xs:element name="PaceFig_10F" type="xs:int" />
+        <xs:element name="PaceFig_Late" type="xs:int" />
+        <xs:element ref="TripComment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- PP Trackmaster Elements-->
+  <xs:element name="PP_Trackmaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SpeedFig" type="xs:int" />
+        <xs:element ref="TripComment" />
+        <xs:element ref="LongTripComment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- Course Elements-->
+  <xs:element name="Course">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CourseCode" />
+        <xs:element ref="CourseName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="Runs_All" type="xs:int" />
+  <xs:element name="PaceWins_All" type="xs:int" />
+  <xs:element name="StalkWins_All" type="xs:int" />
+  <xs:element name="CloseWins_All" type="xs:int" />
+  <xs:element name="Runs_Recent" type="xs:int" />
+  <xs:element name="PaceWins_Recent" type="xs:int" />
+  <xs:element name="StalkWins_Recent" type="xs:int" />
+  <xs:element name="CloseWins_Recent" type="xs:int" />
+
+  <xs:element name="NumberOfRaces" type="xs:int" />
+  <xs:element name="DayEve" type="xs:NCName" />
+  <xs:element name="RaceType" type="xs:string" default="" />
+  <xs:element name="RaceTypeLong" type="xs:string" default="" />
+  <xs:element name="Purse" type="xs:int" />
+  <xs:element name="RaceNumber" type="xs:int" />
+  <xs:element name="RaceDescription" type="xs:string" />
+  <xs:element name="BetTypes" type="xs:string" />
+  <xs:element name="AgeSexRestrictions" type="xs:string" />
+  <xs:element name="DistanceFurlongs" type="xs:double" />
+  <xs:element name="DistanceYards" type="xs:double" />
+  <xs:element name="CourseCode" type="xs:NCName" />
+  <xs:element name="CourseName" type="xs:string" default="" />
+  <xs:element name="Surface" type="xs:NCName" />
+  <xs:element name="ClassRating" type="xs:int" />
+  <xs:element name="MaxEarly" type="xs:int" />
+  <xs:element name="MaxMiddle" type="xs:int" />
+  <xs:element name="MaxLate" type="xs:int" />
+  <xs:element name="MaxAverage" type="xs:int" />
+  <xs:element name="MaxRecent" type="xs:int" />
+  <xs:element name="MaxPace" type="xs:double" />
+  <xs:element name="ClassRating_GMR" type="xs:int" />
+  <xs:element name="BrisPar_SpeedFig" type="xs:int" />
+  <xs:element name="BrisPar_2F" type="xs:int" />
+  <xs:element name="BrisPar_4F" type="xs:int" />
+  <xs:element name="BrisPar_6F" type="xs:int" />
+  <xs:element name="BrisPar_Late" type="xs:int" />
+  <xs:element name="Going" type="xs:string" />
+  <xs:element name="Weather" type="xs:string" />
+  <xs:element name="PostTime" type="xs:NMTOKEN" />
+  <xs:element name="NumberOfHorses" type="xs:int" />
+  <xs:element name="Weight" type="xs:int" />
+  <xs:element name="ApprenticeAllowance" type="xs:int" />
+  <xs:element name="Age" type="xs:int" />
+  <xs:element name="Gender" type="xs:string" />
+  <xs:element name="OfficialPositionText" type="xs:string" />
+  <xs:element name="OfficialFinish" type="xs:string" />
+  <xs:element name="Finish123" type="xs:string" />
+  <xs:element name="Finish123_GMR" type="xs:string" default=" " />
+  <xs:element name="TripComment" type="xs:string" />
+  <xs:element name="LongTripComment" type="xs:string" />
+  <xs:element name="Medication" type="xs:string" />
+  <xs:element name="Equipment" type="xs:string" />
+  <xs:element name="MorningLine" type="xs:decimal" />
+  <xs:element name="SaddleClothNo" type="xs:string" />
+  <xs:element name="Draw" type="xs:int" />
+  <xs:element name="ClaimPrice" type="xs:int" />
+
+  <xs:element name="OwnerName" type="xs:string" />
+  <xs:element name="Sire" type="xs:string" />
+  <xs:element name="Dam" type="xs:string" />
+  <xs:element name="DamSire" type="xs:string" />
+  <xs:element name="Breeder" type="xs:string" />
+  <xs:element name="BredLocation" type="xs:string" />
+  <xs:element name="Breed" type="xs:string" />
+  <xs:element name="Country" type="xs:string" />
+  <xs:element name="HorseName" type="xs:string" />
+  <xs:element name="RaceDate" type="xs:date" />
+  <xs:element name="Code" type="xs:string" />
+  <xs:element name="Description" type="xs:string" />
+  <xs:element name="WinName" type="xs:string" />
+  <xs:element name="PlaceName" type="xs:string" />
+  <xs:element name="ShowName" type="xs:string" />
+  <xs:element name="JockeyName" type="xs:string" />
+  <xs:element name="TrainerName" type="xs:string" />
+  <xs:element name="FirstName" type="xs:string" />
+  <xs:element name="MiddleName" type="xs:string" />
+  <xs:element name="LastName" type="xs:string" />
+  <xs:element name="Suffix" type="xs:string" />
+  <xs:element name="FinalTime" type="xs:double" />
+  <xs:element name="DistanceBeaten" type="xs:double" />
+  <xs:element name="Early" type="xs:double" />
+  <xs:element name="ML" type="xs:double" />
+  <xs:element name="Odds" type="xs:double" />
+  <xs:element name="LK_Odds" type="xs:double" />
+  <xs:element name="Middle" type="xs:double" />
+  <xs:element name="Late" type="xs:double" />
+  <xs:element name="Dash" type="xs:double" />
+  <xs:element name="Golden" type="xs:double" />
+  <xs:element name="Latekick" type="xs:double" />
+  <xs:element name="LateSpeed" type="xs:double" />
+  <xs:element name="Average" type="xs:double" />
+  <xs:element name="Recent" type="xs:double" />
+  <xs:element name="Quirin" type="xs:double" />
+
+  <xs:element name="RunStyle_BRIS" type="xs:string" />
+  <xs:element name="PaceRuns" type="xs:int" />
+  <xs:element name="PaceWins" type="xs:int" />
+  <xs:element name="OffPaceRuns" type="xs:int" />
+  <xs:element name="OffPaceWins" type="xs:int" />
+
+
+  <xs:element name="WorkDate" type="xs:date" />
+  <xs:element name="WorkTrack" type="xs:string" />
+  <xs:element name="WorkDistance" type="xs:double" />
+  <xs:element name="WorkGoing" type="xs:string" />
+  <xs:element name="WorkSurface" type="xs:string" />
+  <xs:element name="WorkDescription" type="xs:string" />
+  <xs:element name="WorkTime" type="xs:double" />
+  <xs:element name="WorkRank" type="xs:string" />
+  <xs:element name="WorkRating" type="xs:int" />
+  <xs:element name="WorkFromGate" type="xs:int" />
+  <xs:element name="WorkMates" type="xs:string" default="" />
+  <xs:element name="WorkDaysAgo" type="xs:string" default="" />
+
+  <xs:element name="LifeTime_Runs" type="xs:int" />
+  <xs:element name="LifeTime_Win" type="xs:int" />
+  <xs:element name="LifeTime_Place" type="xs:int" />
+  <xs:element name="LifeTime_Show" type="xs:int" />
+
+  <xs:element name="ThisYear_Runs" type="xs:int" />
+  <xs:element name="ThisYear_Win" type="xs:int" />
+  <xs:element name="ThisYear_Place" type="xs:int" />
+  <xs:element name="ThisYear_Show" type="xs:int" />
+
+  <xs:element name="LastYear_Runs" type="xs:int" />
+  <xs:element name="LastYear_Win" type="xs:int" />
+  <xs:element name="LastYear_Place" type="xs:int" />
+  <xs:element name="LastYear_Show" type="xs:int" />
+
+  <xs:element name="Course_Runs" type="xs:int" />
+  <xs:element name="Course_Win" type="xs:int" />
+  <xs:element name="Course_Place" type="xs:int" />
+  <xs:element name="Course_Show" type="xs:int" />
+
+  <xs:element name="Wet_Runs" type="xs:int" />
+  <xs:element name="Wet_Win" type="xs:int" />
+  <xs:element name="Wet_Place" type="xs:int" />
+  <xs:element name="Wet_Show" type="xs:int" />
+
+  <xs:element name="Turf_Runs" type="xs:int" />
+  <xs:element name="Turf_Win" type="xs:int" />
+  <xs:element name="Turf_Place" type="xs:int" />
+  <xs:element name="Turf_Show" type="xs:int" />
+
+  <xs:element name="Dirt_Runs" type="xs:int" />
+  <xs:element name="Dirt_Win" type="xs:int" />
+  <xs:element name="Dirt_Place" type="xs:int" />
+  <xs:element name="Dirt_Show" type="xs:int" />
+
+  <xs:element name="AW_Runs" type="xs:int" />
+  <xs:element name="AW_Win" type="xs:int" />
+  <xs:element name="AW_Place" type="xs:int" />
+  <xs:element name="AW_Show" type="xs:int" />
+
+  <xs:element name="Distance_Runs" type="xs:int" />
+  <xs:element name="Distance_Win" type="xs:int" />
+  <xs:element name="Distance_Place" type="xs:int" />
+  <xs:element name="Distance_Show" type="xs:int" />
+
+  <xs:element name="Jockey_Runs_Meet" type="xs:int" />
+  <xs:element name="Jockey_Win_Meet" type="xs:int" />
+  <xs:element name="Jockey_Place_Meet" type="xs:int" />
+  <xs:element name="Jockey_Show_Meet" type="xs:int" />
+
+  <xs:element name="Jockey_30d_Runs" type="xs:int" />
+  <xs:element name="Jockey_30d_Win" type="xs:int" />
+  <xs:element name="Jockey_30d_Place" type="xs:int" />
+  <xs:element name="Jockey_30d_Show" type="xs:int" />
+
+  <xs:element name="Trainer_Runs_Meet" type="xs:int" />
+  <xs:element name="Trainer_Win_Meet" type="xs:int" />
+  <xs:element name="Trainer_Place_Meet" type="xs:int" />
+  <xs:element name="Trainer_Show_Meet" type="xs:int" />
+
+  <xs:element name="Trainer_30d_Runs" type="xs:int" />
+  <xs:element name="Trainer_30d_Win" type="xs:int" />
+  <xs:element name="Trainer_30d_Place" type="xs:int" />
+  <xs:element name="Trainer_30d_Show" type="xs:int" />
+  
+  <xs:element name="Trainer_ThisYear" type="xs:string" />
+  <xs:element name="Trainer_LastYear" type="xs:string" />
+  <xs:element name="Jockey_ThisYear" type="xs:string" />
+  <xs:element name="Jockey_LastYear" type="xs:string" />
+
+  <xs:element name="EarningsLifeTime" type="xs:int" />
+  <xs:element name="EarningsThisYear" type="xs:int" />
+  <xs:element name="EarningsLastYear" type="xs:int" />
+  <xs:element name="EarningsCourse" type="xs:int" />
+  <xs:element name="EarningsDirt" type="xs:int" />
+  <xs:element name="EarningsTurf" type="xs:int" />
+  <xs:element name="EarningsAW" type="xs:int" />
+  <xs:element name="EarningsWet" type="xs:int" />
+  <xs:element name="EarningsDistance" type="xs:int" />
+
+</xs:schema>
+

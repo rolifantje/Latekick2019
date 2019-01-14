@@ -1,0 +1,17 @@
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.PDF.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.PDF.pdb
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\itextsharp.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.BLL.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.BOL.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.DAL.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\FileHelpers.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.BLL.pdb
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.BOL.pdb
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Latekick.DAL.pdb
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\code\WinApps\USA\Latekick\Latekick.PDF\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\code\WinApps\USA\Latekick\Latekick.PDF\obj\Debug\Latekick.PDF.csprojResolveAssemblyReference.cache
+C:\code\WinApps\USA\Latekick\Latekick.PDF\obj\Debug\Latekick.PDF.dll
+C:\code\WinApps\USA\Latekick\Latekick.PDF\obj\Debug\Latekick.PDF.pdb

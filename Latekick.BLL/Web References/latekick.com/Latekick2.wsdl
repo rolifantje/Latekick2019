@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetRaceDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="racedate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="coursecode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="racenumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRaceDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRaceDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectedRatings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="racedate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="coursecode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="racenumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="horsename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectedRatingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectedRatingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHistoricalRatings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="racedate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="horsename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHistoricalRatingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHistoricalRatingsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkouts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="racedate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="horsename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkoutsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkoutsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetRaceDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRaceDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetRaceDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRaceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedRatingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectedRatings" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedRatingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectedRatingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricalRatingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHistoricalRatings" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricalRatingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHistoricalRatingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkoutsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkouts" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkoutsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkoutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRaceDetailsHttpGetIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="coursecode" type="s:string" />
+    <wsdl:part name="racenumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRaceDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedRatingsHttpGetIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="coursecode" type="s:string" />
+    <wsdl:part name="racenumber" type="s:string" />
+    <wsdl:part name="horsename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedRatingsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricalRatingsHttpGetIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="horsename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricalRatingsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkoutsHttpGetIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="horsename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkoutsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetRaceDetailsHttpPostIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="coursecode" type="s:string" />
+    <wsdl:part name="racenumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRaceDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedRatingsHttpPostIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="coursecode" type="s:string" />
+    <wsdl:part name="racenumber" type="s:string" />
+    <wsdl:part name="horsename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectedRatingsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricalRatingsHttpPostIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="horsename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetHistoricalRatingsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkoutsHttpPostIn">
+    <wsdl:part name="racedate" type="s:string" />
+    <wsdl:part name="horsename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkoutsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="Latekick2Soap">
+    <wsdl:operation name="GetRaceDetails">
+      <wsdl:input message="tns:GetRaceDetailsSoapIn" />
+      <wsdl:output message="tns:GetRaceDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <wsdl:input message="tns:GetProjectedRatingsSoapIn" />
+      <wsdl:output message="tns:GetProjectedRatingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <wsdl:input message="tns:GetHistoricalRatingsSoapIn" />
+      <wsdl:output message="tns:GetHistoricalRatingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <wsdl:input message="tns:GetWorkoutsSoapIn" />
+      <wsdl:output message="tns:GetWorkoutsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Latekick2HttpGet">
+    <wsdl:operation name="GetRaceDetails">
+      <wsdl:input message="tns:GetRaceDetailsHttpGetIn" />
+      <wsdl:output message="tns:GetRaceDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <wsdl:input message="tns:GetProjectedRatingsHttpGetIn" />
+      <wsdl:output message="tns:GetProjectedRatingsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <wsdl:input message="tns:GetHistoricalRatingsHttpGetIn" />
+      <wsdl:output message="tns:GetHistoricalRatingsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <wsdl:input message="tns:GetWorkoutsHttpGetIn" />
+      <wsdl:output message="tns:GetWorkoutsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Latekick2HttpPost">
+    <wsdl:operation name="GetRaceDetails">
+      <wsdl:input message="tns:GetRaceDetailsHttpPostIn" />
+      <wsdl:output message="tns:GetRaceDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <wsdl:input message="tns:GetProjectedRatingsHttpPostIn" />
+      <wsdl:output message="tns:GetProjectedRatingsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <wsdl:input message="tns:GetHistoricalRatingsHttpPostIn" />
+      <wsdl:output message="tns:GetHistoricalRatingsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <wsdl:input message="tns:GetWorkoutsHttpPostIn" />
+      <wsdl:output message="tns:GetWorkoutsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Latekick2Soap" type="tns:Latekick2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRaceDetails">
+      <soap:operation soapAction="http://tempuri.org/GetRaceDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <soap:operation soapAction="http://tempuri.org/GetProjectedRatings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <soap:operation soapAction="http://tempuri.org/GetHistoricalRatings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <soap:operation soapAction="http://tempuri.org/GetWorkouts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Latekick2Soap12" type="tns:Latekick2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRaceDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetRaceDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <soap12:operation soapAction="http://tempuri.org/GetProjectedRatings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <soap12:operation soapAction="http://tempuri.org/GetHistoricalRatings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkouts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Latekick2HttpGet" type="tns:Latekick2HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetRaceDetails">
+      <http:operation location="/GetRaceDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <http:operation location="/GetProjectedRatings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <http:operation location="/GetHistoricalRatings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <http:operation location="/GetWorkouts" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Latekick2HttpPost" type="tns:Latekick2HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetRaceDetails">
+      <http:operation location="/GetRaceDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectedRatings">
+      <http:operation location="/GetProjectedRatings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalRatings">
+      <http:operation location="/GetHistoricalRatings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkouts">
+      <http:operation location="/GetWorkouts" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Latekick2">
+    <wsdl:port name="Latekick2Soap" binding="tns:Latekick2Soap">
+      <soap:address location="http://www.hkhorses.com/ws/Latekick2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Latekick2Soap12" binding="tns:Latekick2Soap12">
+      <soap12:address location="http://www.hkhorses.com/ws/Latekick2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Latekick2HttpGet" binding="tns:Latekick2HttpGet">
+      <http:address location="http://www.hkhorses.com/ws/Latekick2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Latekick2HttpPost" binding="tns:Latekick2HttpPost">
+      <http:address location="http://www.hkhorses.com/ws/Latekick2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
