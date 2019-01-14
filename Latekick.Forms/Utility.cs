@@ -139,7 +139,7 @@ namespace Latekick.Forms
                 try
                 {
                     string BalanceMessage = "";
-                    Latekick.BLL.AccountManagement.User.PurchaseOne(Program.ThisUser, out BalanceMessage);
+                    //Latekick.BLL.AccountManagement.User.PurchaseOne(Program.ThisUser, out BalanceMessage);
 
                     Utility.SendFeedbackMessage(lvFeedback, "Unzipping the Trackmaster archive.");
 
